@@ -6,7 +6,7 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 18:30:19 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/14 15:34:36 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/02/14 21:22:20 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else if (dst < src)
 		ft_memcpy(dst, src, len);
-	return(dst);
+	return (dst);
 }
