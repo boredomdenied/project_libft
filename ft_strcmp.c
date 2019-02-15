@@ -6,7 +6,7 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 15:46:17 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/14 15:37:29 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/02/15 14:43:53 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ int		ft_strcmp(const char *s1, const char *s2)
 			return (0);
 		p++;
 	}
-	return (s1[p] - s2[p]);
+	return (((unsigned char)s1[p]) - ((unsigned char)s2[p]));
 }

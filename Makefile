@@ -6,7 +6,7 @@
 #    By: jrameau <jrameau@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:58:27 by jrameau           #+#    #+#              #
-#    Updated: 2019/02/14 21:54:12 by bchapman         ###   ########.fr        #
+#    Updated: 2019/02/15 11:52:59 by bchapman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,15 @@ FILES		= ft_atoi.c \
 				ft_strrchr.c \
 				ft_strstr.c \
 				ft_tolower.c \
-				ft_toupper.c
+				ft_toupper.c \
+				ft_memalloc.c \
+				ft_memdel.c \
+				ft_strnew.c \
+				ft_strdel.c \
+				ft_strclr.c \
+				ft_striter.c \
+				ft_striteri.c \
+				ft_strmap.c
 
 OBJ=$(FILES:.c=.o)
 
