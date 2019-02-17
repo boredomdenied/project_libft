@@ -6,7 +6,7 @@
 #    By: jrameau <jrameau@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:58:27 by jrameau           #+#    #+#              #
-#    Updated: 2019/02/17 00:23:03 by bchapman         ###   ########.fr        #
+#    Updated: 2019/02/17 14:39:59 by bchapman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,10 @@ FILES		= ft_atoi.c \
 				ft_strclr.c \
 				ft_striter.c \
 				ft_striteri.c \
-				ft_strmap.c
+				ft_strmap.c \
+				ft_strmapi.c \
+				ft_strequ.c \
+				ft_strnequ.c
 
 OBJ=$(FILES:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 15:38:13 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/14 15:37:48 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/02/17 13:37:50 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strdup(const char *s1)
 	i = 0;
 	while (s1[i] != '\0')
 		i++;
-	dest = (char*)malloc(sizeof(char) * (i + 1));
+	if (!(dest = (char*)malloc(sizeof(char) * (i + 1))))
+		return (NULL);
 	i = 0;
 	while (s1[i] != '\0')
 	{
