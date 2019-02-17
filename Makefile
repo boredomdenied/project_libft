@@ -6,12 +6,11 @@
 #    By: jrameau <jrameau@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:58:27 by jrameau           #+#    #+#              #
-#    Updated: 2019/02/15 11:52:59 by bchapman         ###   ########.fr        #
+#    Updated: 2019/02/17 00:23:03 by bchapman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME=libft.a
-DEPS= libft.h
 CFLAGS= -I $(INCLUDES) -Wall -Wextra -Werror
 INCLUDES = includes/
 

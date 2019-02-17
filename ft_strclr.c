@@ -6,7 +6,7 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 10:54:20 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/15 11:21:22 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/02/15 14:57:35 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_strclr(char *s)
 {
-unsigned int i;
+	unsigned int i;
 
-i = 0;
+	i = 0;
 	while (s[i])
 	{
-	s[i] = '\0';
-	i++;
+		s[i] = '\0';
+		i++;
 	}
 }

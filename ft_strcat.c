@@ -6,11 +6,11 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 12:14:03 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/14 21:56:33 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/02/16 14:30:33 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 char	*ft_strcat(char *s1, const char *s2)
 {
@@ -21,13 +21,13 @@ char	*ft_strcat(char *s1, const char *s2)
 	j = 0;
 	if (s2[i] == '\0')
 		return (s1);
-	while (s1[i] != '\0')
+	while (s1[i])
 		i++;
-	while (s1[j] != '\0')
+	while (s2[j])
 	{
 		s1[j + i] = s2[j];
 		j++;
 	}
-	s1[i] = '\0';
+	s1[j + i] = '\0';
 	return (s1);
 }

@@ -6,7 +6,7 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 06:23:37 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/14 15:54:30 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/02/16 14:52:44 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,14 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 	j = 0;
 	if (s2[i] == '\0')
 		return (s1);
-	while (s1[i] != '\0' && n-- > 0)
+	while (s1[i])
 		i++;
-	while (s1[j] != '\0' && n-- > 0)
+	while (s2[j] && n > 0)
 	{
 		s1[j + i] = s2[j];
 		j++;
+		n--;
 	}
-	s1[i] = '\0';
+	s1[j + i] = '\0';
 	return (s1);
 }
