@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/13 06:23:37 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/17 16:06:30 by bchapman         ###   ########.fr       */
+/*   Created: 2019/02/17 15:02:17 by bchapman          #+#    #+#             */
+/*   Updated: 2019/02/17 15:25:42 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
+#include <stdlib.h>
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	int i;
-	int j;
+	size_t	i;
+	char	*sub;
 
 	i = 0;
-	j = 0;
-	if (s2[i] == '\0')
-		return (s1);
-	while (s1[i])
-		i++;
-	while (s2[j] && n > 0)
-	{
-		s1[j + i] = s2[j];
-		j++;
-		n--;
-	}
-	s1[j + i] = '\0';
-	return (s1);
+	if (!(sub = (char*)malloc(sizeof(char) * len + 1)))
+		return (NULL);
+	while (s[start] && len-- > 0)
+		sub[i++] = s[start++];
+	sub[i] = '\0';
+	return (sub);
 }

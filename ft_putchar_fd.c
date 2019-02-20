@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/13 06:23:37 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/17 16:06:30 by bchapman         ###   ########.fr       */
+/*   Created: 2019/02/19 16:35:44 by bchapman          #+#    #+#             */
+/*   Updated: 2019/02/19 21:30:22 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
+#include <unistd.h>
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	int i;
-	int j;
-
-	i = 0;
-	j = 0;
-	if (s2[i] == '\0')
-		return (s1);
-	while (s1[i])
-		i++;
-	while (s2[j] && n > 0)
+	if (fd == -1)
 	{
-		s1[j + i] = s2[j];
-		j++;
-		n--;
+		write(1, "open() failed\n", 15);
 	}
-	s1[j + i] = '\0';
-	return (s1);
+	write(fd, &c, 1);
 }

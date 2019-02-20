@@ -1,32 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/15 09:28:04 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/17 21:46:37 by bchapman         ###   ########.fr       */
+/*   Created: 2019/02/18 19:37:49 by bchapman          #+#    #+#             */
+/*   Updated: 2019/02/18 21:04:37 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
-void	*ft_memalloc(size_t size)
+char	*ft_strtrim(char const *s)
 {
-	size_t	i;
-	char	*temp;
+	int		i;
+	int		j;
+	int		k;
+	char	*trim;
 
 	i = 0;
-	if (!(temp = (void*)malloc(sizeof(size_t) * (size))))
+	j = 0;
+	k = 0;
+	while (s[i])
+		i++;
+	i--;
+	while (s[i] == '\t' || s[i] == '\n' || s[i] == ' ')
+		i--;
+	i++;
+	while (s[j] && (s[j] == '\t' || s[j] == '\n' || s[j] == ' '))
+		j++;
+	if (i == 0)
+		i = j;
+	if (!(trim = (char*)malloc(sizeof(char) * (i - j + 1))))
 		return (NULL);
-	if (size > 0)
-	{
-		while (size + 1 > i)
-		{
-			temp[i++] = 0;
-		}
-	}
-	return (temp);
+	while (j < i)
+		trim[k++] = s[j++];
+	trim[k] = '\0';
+	return (trim);
 }

@@ -6,7 +6,7 @@
 #    By: jrameau <jrameau@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:58:27 by jrameau           #+#    #+#              #
-#    Updated: 2019/02/17 14:39:59 by bchapman         ###   ########.fr        #
+#    Updated: 2019/02/19 16:57:08 by bchapman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,16 @@ FILES		= ft_atoi.c \
 				ft_strmap.c \
 				ft_strmapi.c \
 				ft_strequ.c \
-				ft_strnequ.c
+				ft_strnequ.c \
+				ft_strsub.c \
+				ft_strjoin.c \
+				ft_strtrim.c \
+				ft_itoa.c \
+				ft_putendl.c \
+				ft_putchar_fd.c \
+				ft_putstr_fd.c \
+				ft_putendl_fd.c \
+				ft_putnbr_fd.c
 
 OBJ=$(FILES:.c=.o)
 

@@ -1,25 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/12 17:12:46 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/19 21:52:27 by bchapman         ###   ########.fr       */
+/*   Created: 2019/02/19 16:54:03 by bchapman          #+#    #+#             */
+/*   Updated: 2019/02/19 16:59:14 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t i;
-
-	i = 0;
-	while (i < n)
+	if (n >= 2147483647)
 	{
-		((unsigned char*)s)[i] = '\0';
-		i++;
+		ft_putchar_fd('2', fd);
+		ft_putnbr_fd(147483647, fd);
+	}
+	else if (n <= -2147483648)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		ft_putnbr_fd(147483648, fd);
+	}
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-n, fd);
+	}
+	else if (n < 10)
+		ft_putchar_fd(n + '0', fd);
+	else
+	{
+		ft_putnbr_fd((n / 10), fd);
+		ft_putchar_fd((n % 10) + '0', fd);
 	}
 }
