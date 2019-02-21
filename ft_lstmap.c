@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/12 18:45:33 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/20 13:29:47 by bchapman         ###   ########.fr       */
+/*   Created: 2019/02/21 00:43:08 by bchapman          #+#    #+#             */
+/*   Updated: 2019/02/21 12:25:13 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	size_t		i;
-	size_t		len;
-	char		*str;
+	t_list *fresh;
 
-	str = (void*)s;
-	i = 0;
-	len = ft_strlen(str);
-	if (len < n)
-		n = len;
-	while (i < n && str[i] != ((char)c))
+	if (!lst || !f)
+		return (NULL);
+	if (lst->next)
 	{
-		i++;
+		fresh = ft_lstmap(lst->next, f);
+		ft_lstadd(&fresh, f(lst));
 	}
-	if (str[i] == (char)c)
-		return (&str[i]);
-	return (NULL);
+	else
+		fresh = f(lst);
+	return (fresh);
 }

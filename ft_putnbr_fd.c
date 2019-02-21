@@ -6,7 +6,7 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 16:54:03 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/19 16:59:14 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/02/20 18:38:38 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n >= 2147483647)
-	{
-		ft_putchar_fd('2', fd);
-		ft_putnbr_fd(147483647, fd);
-	}
-	else if (n <= -2147483648)
+	if (n <= -2147483648)
 	{
 		ft_putchar_fd('-', fd);
 		ft_putchar_fd('2', fd);

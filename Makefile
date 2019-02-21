@@ -6,7 +6,7 @@
 #    By: jrameau <jrameau@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:58:27 by jrameau           #+#    #+#              #
-#    Updated: 2019/02/19 16:57:08 by bchapman         ###   ########.fr        #
+#    Updated: 2019/02/21 12:11:12 by bchapman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,14 @@ FILES		= ft_atoi.c \
 				ft_putchar_fd.c \
 				ft_putstr_fd.c \
 				ft_putendl_fd.c \
-				ft_putnbr_fd.c
+				ft_putnbr_fd.c \
+				ft_strlcat.c \
+				ft_lstnew.c \
+				ft_lstdelone.c \
+				ft_lstdel.c \
+				ft_lstiter.c \
+				ft_lstmap.c \
+				ft_lstadd.c
 
 OBJ=$(FILES:.c=.o)
 
