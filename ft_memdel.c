@@ -6,11 +6,11 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 10:08:28 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/15 14:59:57 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/02/21 15:48:15 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 #include <stdlib.h>
 
 void	ft_memdel(void **ap)

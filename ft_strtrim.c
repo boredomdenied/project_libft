@@ -6,11 +6,11 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/18 19:37:49 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/18 21:04:37 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/02/21 15:44:52 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>

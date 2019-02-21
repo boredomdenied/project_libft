@@ -6,11 +6,11 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 22:43:32 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/21 00:38:39 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/02/21 15:43:14 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {

@@ -6,11 +6,11 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 15:50:22 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/20 20:58:30 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/02/21 15:46:55 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 char	*ft_strstr(const char *hay, const char *needle)
 {

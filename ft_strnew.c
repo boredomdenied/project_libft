@@ -6,11 +6,11 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 10:27:09 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/20 13:28:20 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/02/21 15:46:24 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 #include <stdlib.h>
 
 char	*ft_strnew(size_t size)

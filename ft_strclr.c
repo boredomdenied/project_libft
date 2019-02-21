@@ -6,11 +6,11 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 10:54:20 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/15 14:57:35 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/02/21 15:46:08 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	ft_strclr(char *s)
 {
