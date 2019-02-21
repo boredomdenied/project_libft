@@ -6,13 +6,12 @@
 #    By: jrameau <jrameau@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:58:27 by jrameau           #+#    #+#              #
-#    Updated: 2019/02/21 15:22:35 by bchapman         ###   ########.fr        #
+#    Updated: 2019/02/21 15:23:48 by bchapman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME=libft.a
-CFLAGS= -I $(INCLUDES) -Wall -Wextra -Werror
-INCLUDES = ./
+CFLAGS= -I libft.h -Wall -Wextra -Werror
 
 FILES		= ft_atoi.c \
 				ft_bzero.c \
