@@ -6,11 +6,12 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 11:48:14 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/20 18:36:50 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/02/24 04:43:41 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "stdio.h"
 
 void	ft_putnbr(int nb)
 {

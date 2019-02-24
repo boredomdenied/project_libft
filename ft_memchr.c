@@ -6,7 +6,7 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 18:45:33 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/20 13:29:47 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/02/24 04:04:33 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	if (len < n)
 		n = len;
 	while (i < n && str[i] != ((char)c))
-	{
 		i++;
-	}
 	if (str[i] == (char)c)
 		return (&str[i]);
 	return (NULL);

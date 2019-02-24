@@ -6,12 +6,13 @@
 #    By: jrameau <jrameau@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:58:27 by jrameau           #+#    #+#              #
-#    Updated: 2019/02/21 15:38:54 by bchapman         ###   ########.fr        #
+#    Updated: 2019/02/24 00:01:05 by bchapman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME=libft.a
-CFLAGS= -I libft.h -Wall -Wextra -Werror
+CFLAGS= -I $(INCLUDES) -Wall -Wextra -Werror
+INCLUDES = includes/
 
 FILES		= ft_atoi.c \
 				ft_bzero.c \
@@ -69,7 +70,8 @@ FILES		= ft_atoi.c \
 				ft_lstdel.c \
 				ft_lstiter.c \
 				ft_lstmap.c \
-				ft_lstadd.c
+				ft_lstadd.c \
+				ft_strsplit.c
 
 OBJ=$(FILES:.c=.o)
 

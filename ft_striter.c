@@ -6,12 +6,13 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 11:15:07 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/15 11:32:50 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/02/24 03:56:45 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striter(char *s, void (*f)(char*))
 {
-	while (*s)
-		f(s++);
+	if (s && f)
+		while (*s)
+			f(s++);
 }
