@@ -6,7 +6,7 @@
 #    By: jrameau <jrameau@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:58:27 by jrameau           #+#    #+#              #
-#    Updated: 2019/02/24 00:01:05 by bchapman         ###   ########.fr        #
+#    Updated: 2019/02/24 14:41:08 by bchapman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,7 +71,8 @@ FILES		= ft_atoi.c \
 				ft_lstiter.c \
 				ft_lstmap.c \
 				ft_lstadd.c \
-				ft_strsplit.c
+				ft_strsplit.c \
+				ft_wc.c
 
 OBJ=$(FILES:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 08:07:45 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/24 03:31:08 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/02/24 14:40:41 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,6 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstadd(t_list **alst, t_list *new);
 char				**ft_strsplit(char const *s, char c);
+int					ft_wc(const char *s, char c);
 
 #endif

@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_wc.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/17 15:02:17 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/24 16:11:16 by bchapman         ###   ########.fr       */
+/*   Created: 2019/02/24 14:33:50 by bchapman          #+#    #+#             */
+/*   Updated: 2019/02/24 16:11:01 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+int	ft_wc(const char *s, char c)
 {
-	char	*res;
-	size_t	i;
+	int wc;
+	int i;
 
-	res = ft_strnew(len);
 	i = 0;
-	if (!s || !res)
-		return (NULL);
-	while (i < len)
-	{
-		res[i] = s[start];
+	wc = 0;
+	while (s[i] == c)
 		i++;
-		start++;
+	while (s[i])
+	{
+		wc++;
+		while (s[i] && s[i] != c)
+			i++;
+		while (s[i] && s[i] == c)
+			i++;
 	}
-	res[i] = '\0';
-	return (res);
+	return (wc);
 }
