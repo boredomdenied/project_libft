@@ -6,7 +6,7 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/24 15:02:05 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/24 16:10:44 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/02/24 17:12:35 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	**ft_strsplit(char const *s, char c)
 	{
 		if (s[i] == c && flag)
 			arr[j++] = ft_strsub(s, start, i - start);
-		if (s[i] != c && !flag)
+		if (!flag && s[i] != c)
 			start = i;
 		flag = (s[i] == c) ? 0 : 1;
 	}

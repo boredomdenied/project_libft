@@ -1,0 +1,77 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/02/21 19:52:19 by bchapman          #+#    #+#             */
+/*   Updated: 2019/02/24 15:01:50 by bchapman         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdlib.h>
+#include "libft.h"
+#include <stdio.h>
+
+char **ft_strsplit(char const *s, char c)
+{
+	int i;
+	int j;
+	int k;
+	int spaces;
+	char **arr;
+	int word;
+	int start;
+
+	i = 0;
+	j = 0;
+	k = 0;
+	spaces = 0;
+	word = 0;
+	start = 0;
+
+	if (!s)
+		return (NULL);
+	if (!(arr=(char**)malloc(sizeof(char*) * ((ft_wc(s, c)) + 1))))
+		return (NULL);
+	while ((ft_wc(s, c)) > j && s[i])
+	{
+		while (s[i] == c && s[i] != 0)
+			i++;
+		start = i;
+		while (s[i] != c && s[i] != 0)
+		{
+			i++;
+			word++;
+		}
+		if (!(arr[j]=(char*)malloc(sizeof(char) * (word + 1))))
+			return (NULL);
+		k = 0;
+		while(word)
+		{
+			arr[j][k] = s[start];
+			k++;
+			start++;
+			word--;
+		}
+ 		arr[j++][k] = '\0';
+	}
+	arr[j] = 0;
+	return (arr);
+}
+/*
+int		main(void)
+{
+	char **arr;
+	//printf("%i",word_count("***HEllo****World", '*'));
+	arr = ft_strsplit("      split       this for   me  !       ", ' ');
+
+	while (*arr != 0)
+	{
+		printf("%s" ,*arr);
+		arr++;
+	}
+	return (0);
+}
+*/
