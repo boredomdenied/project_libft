@@ -6,7 +6,7 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 13:30:44 by bchapman          #+#    #+#             */
-/*   Updated: 2019/03/15 11:40:43 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/03/15 11:42:24 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ size_t	ft_strlcat(char *s1, const char *s2, size_t size)
 	}
 	if (i < size)
 		s1[len] = '\0';
-	return (i + ft_strlen(s2));g
+	return (i + ft_strlen(s2));
 }
