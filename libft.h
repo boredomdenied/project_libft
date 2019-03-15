@@ -6,7 +6,7 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 08:07:45 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/24 16:49:12 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/03/15 11:37:12 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
-size_t				ft_strlcat(char *dst, const char *src, size_t size);
+size_t				ft_strlcat(char *s1, const char *s2, size_t dstsize);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *hay, const char *needle);

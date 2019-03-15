@@ -6,18 +6,18 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 19:25:21 by bchapman          #+#    #+#             */
-/*   Updated: 2019/03/14 19:56:22 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/03/15 11:22:23 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned long	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-	unsigned long	i;
+	size_t	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (s[i] != 0)
 		i++;
 	return (i);
 }
