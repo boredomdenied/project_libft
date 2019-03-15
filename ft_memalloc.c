@@ -6,7 +6,7 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 09:28:04 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/21 16:10:01 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/03/14 19:21:36 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,6 @@ void	*ft_memalloc(size_t size)
 	i = 0;
 	if (!(temp = (void*)malloc((size))))
 		return (NULL);
-	if (size > 0)
-	{
-		while (size + 1 > i)
-		{
-			temp[i++] = 0;
-		}
-	}
+	ft_bzero(temp, size);
 	return (temp);
 }

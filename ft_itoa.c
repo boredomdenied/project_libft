@@ -6,14 +6,14 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/24 16:27:34 by bchapman          #+#    #+#             */
-/*   Updated: 2019/02/24 17:01:37 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/03/14 18:29:33 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int		length(int nbr)
+static int		length(int nbr)
 {
 	int size;
 
@@ -37,7 +37,7 @@ int		length(int nbr)
 	return (size);
 }
 
-char	*post_malloc(int neg, int n, char *arr, int size)
+static char		*post_malloc(int neg, int n, char *arr, int size)
 {
 	if (neg)
 		arr[0] = '-';
@@ -53,7 +53,7 @@ char	*post_malloc(int neg, int n, char *arr, int size)
 	return (arr);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	int		neg;
 	int		max;
