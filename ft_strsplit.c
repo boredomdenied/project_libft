@@ -6,7 +6,7 @@
 /*   By: bchapman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/24 15:02:05 by bchapman          #+#    #+#             */
-/*   Updated: 2019/03/15 11:04:31 by bchapman         ###   ########.fr       */
+/*   Updated: 2019/03/15 20:46:53 by bchapman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,16 @@ char	**ft_strsplit(char const *s, char c)
 	if (flag)
 		arr[j] = ft_strsub(s, start, i - start);
 	return (arr);
+}
+
+#include <stdio.h>
+int main (void)
+{
+	char **res = ft_strsplit("hy smarty!! how are you", ' ');
+	while(*res)
+	{
+		printf("%s", *res);
+		res++;
+	}
+	return 0;
 }
